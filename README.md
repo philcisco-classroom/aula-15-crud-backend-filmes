@@ -18,3 +18,5 @@ Criar o arquivo .env na raiz do projeto:
 Para rodar o projeto:
 - npm run dev
 
+Para abrir o prisma studio no navegador:
+- npx prisma studio
