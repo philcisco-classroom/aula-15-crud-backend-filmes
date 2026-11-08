@@ -1,9 +1,10 @@
-import { prisma } from "../prisma/client";
+import { prisma } from "../prisma/client.js";
 
 export class FilmeService{
 
     async create(dados: {titulo: string; nota: number; imagem: string; })
     {
+        console.log(dados);
         await prisma.filme.create({
             data: dados,
         });

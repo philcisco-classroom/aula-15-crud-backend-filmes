@@ -1,27 +1,29 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "ts-node-dev --respawn src/server.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.9.3",
-    "prisma": "^6.19.3",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^6.0.3"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio --url \"file://./dev/bd\""
   },
   "dependencies": {
-    "@prisma/client": "^6.19.3",
-    "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "@prisma/adapter-better-sqlite3": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "better-sqlite3": "13.0.3",
+    "cors": "2.8.6",
+    "express": "5.3.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.6",
+    "@types/node": "25.9.3",
+    "dotenv": "17.0.0",
+    "prisma": "7.10.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
   }
 }

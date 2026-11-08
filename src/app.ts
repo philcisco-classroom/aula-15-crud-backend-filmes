@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { filmeRoutes } from './routes/filme.routes';
+import { filmeRoutes } from './routes/filme.routes.js';
 
 const app = express();
 
